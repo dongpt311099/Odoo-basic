@@ -1,0 +1,47 @@
+<odoo>
+	<record id='clb_view_tree' model="ir.ui.view">
+		<field name='name'>clb.tree</field>
+		<field name='model'>clb</field>
+		<field name='arch' type="xml">
+			<tree string="Club">
+				<field name="name" />
+				<field name="player_ids" />
+			</tree>
+		</field>
+	</record>
+
+	<record id='clb_view_form' model="ir.ui.view">
+		<field name='name'>clb.form</field>
+		<field name='model'>clb</field>
+		<field name='arch' type="xml">
+			<form string="Clb">
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="player_ids" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="my_search_view" model="ir.ui.view">
+		<field name="name">clb.search</field>
+		<field name="model">clb</field>
+		<field name="arch" type="xml">
+			<search string="clb">
+				<field name="name" />
+				<field name="player_ids" />
+			</search>
+		</field>
+	</record>
+
+	<record id="clb_action" model="ir.actions.act_window">
+		<field name="name">Clb</field>
+		<field name="res_model">clb</field>
+		<field name="view_mode">tree,form,search</field>
+	</record>
+
+	<menuitem id="clb_menu_1" name="Clb"
+		parent="player_menu" action="clb_action" groups="base.group_user" />
+</odoo>
