@@ -1,5 +1,3 @@
-{%- set mod= name|snake -%}
-{%- set model = "%s.%s"|format(mod, mod) -%}
 <odoo>
     <data>
 <!--{% for item in range(5) %}

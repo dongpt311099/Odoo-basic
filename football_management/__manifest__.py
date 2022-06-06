@@ -80,8 +80,13 @@ Tính năng chính
 
     # always loaded
     'data': [
+        'security/player_security.xml',
         'views/player_view.xml',
         'views/clb_view.xml',
+        'views/title_view.xml',
+        'views/goal_view.xml',
+        'security/ir.model.access.csv',
+        'wizard/views/clb_view.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

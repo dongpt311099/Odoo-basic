@@ -5,7 +5,25 @@
 		<field name='arch' type="xml">
 			<tree string="Club">
 				<field name="name" />
+				<field name="avatar" />
+				<field name="image_128" />
+				<field name="introduce_yourself" />
+				<field name="class_fund" />
+				<field name="currency_id" />
+				<field name="founding" />
 				<field name="player_ids" />
+				
+				<button name="create_clb" type="object" string="Create" class="oe_highlight" />
+				<button name="copy_clb" type="object" string="Copy" class="oe_highlight" />
+				<button name="search_clb" type="object" string="Search" class="oe_highlight" />
+				<button name="filter_clb" type="object" string="Filter" class="oe_highlight" />
+				<button name="filter_domain_clb" type="object" string="Filter Domain" class="oe_highlight" />
+				<button name="map_clb" type="object" string="Map" class="oe_highlight" />
+				<button name="sort_clb" type="object" string="sort" class="oe_highlight" />
+				<button name="environment" type="object" string="Environment" class="oe_highlight" />
+				<button name="recordset" type="object" string="Recordset" class="oe_highlight" />
+				<button name="thu_thi_sql" type="object" string="Thực thi sql" class="oe_highlight" />
+				<button name="remove_clb" type="object" string="Remove" class="oe_highlight" />
 			</tree>
 		</field>
 	</record>
@@ -18,6 +36,12 @@
 				<sheet>
 					<group>
 						<field name="name" />
+						<field name="avatar" />
+						<field name="image_128" />
+						<field name="introduce_yourself" />
+						<field name="class_fund" />
+						<field name="currency_id" />
+						<field name="founding" />
 						<field name="player_ids" />
 					</group>
 				</sheet>

@@ -1,1 +1,1 @@
-from . import player, clb
+from . import player, clb, title, nickname, goal

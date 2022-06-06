@@ -1,0 +1,59 @@
+<odoo>
+	<record id='title_view_tree' model="ir.ui.view">
+		<field name='name'>title.tree</field>
+		<field name='model'>title</field>
+		<field name='arch' type="xml">
+			<tree string="Title">
+				<field name="name" />
+				<field name="day" />
+				<field name="attendance_time_start" />
+				<field name="player_ids" />
+				
+				<button name="test_to_date" type="object" string="To Date" class="oe_highlight" />
+				<button name="test_to_string" type="object" string="To String" class="oe_highlight" />
+				<button name="test_today" type="object" string="To Day" class="oe_highlight" />
+				<button name="test_datetime" type="object" string="Datetime" class="oe_highlight" />
+				<button name="test_addtime" type="object" string="Add time" class="oe_highlight" />
+				<button name="test_start_of" type="object" string="Start of" class="oe_highlight" />
+				<button name="test_end_of" type="object" string="End of" class="oe_highlight" />
+			</tree>
+		</field>
+	</record>
+
+	<record id='title_view_form' model="ir.ui.view">
+		<field name='name'>title.form</field>
+		<field name='model'>title</field>
+		<field name='arch' type="xml">
+			<form string="Title">
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="day" />
+						<field name="attendance_time_start" />
+						<field name="player_ids" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="my_search_view" model="ir.ui.view">
+		<field name="name">title.search</field>
+		<field name="model">title</field>
+		<field name="arch" type="xml">
+			<search string="title">
+				<field name="name" />
+				<field name="player_ids" />
+			</search>
+		</field>
+	</record>
+
+	<record id="title_action" model="ir.actions.act_window">
+		<field name="name">Title</field>
+		<field name="res_model">title</field>
+		<field name="view_mode">tree,form,search</field>
+	</record>
+
+	<menuitem id="title_menu_1" name="Title"
+		parent="player_menu" action="title_action" groups="base.group_user" />
+</odoo>
